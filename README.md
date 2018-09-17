@@ -45,6 +45,8 @@ PS:配置文件和全局变量大写
 8、闪现
     应用 对于临时数据的处理，如错误信息(s7 day140 s2.py s3.py)
 9、蓝图
+    用于N个应用程序的大型应用程序，每个蓝图有自己的设置
+    蓝图名称 account = Blueprint('account', __name__) 和 视图函数不要重复，可以在account前面 ＋ blue
 
 10、请求拓展 s4.py
     a.基于before_request做用户登录认证
