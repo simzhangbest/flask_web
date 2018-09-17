@@ -43,13 +43,22 @@ PS:配置文件和全局变量大写
     flask_test05.py
     
 8、闪现
-
+    应用 对于临时数据的处理，如错误信息(s7 day140 s2.py s3.py)
 9、蓝图
 
-10、请求拓展
+10、请求拓展 s4.py
+    a.基于before_request做用户登录认证
+    b.错误信息定制
+    c.模板定制
+        @app.template_global()
+        def sb(a1, a2):
+            return a1 + a2
+        使用 {{ sb(1,2)}}  
+    d.@app.before_first_request()
+      
 
 11、中间件
-
+    请求的入口
 12、上下文管理
     - ThreadLocal
     - 源码(request)
