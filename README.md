@@ -56,7 +56,7 @@ PS:配置文件和全局变量大写
         def sb(a1, a2):
             return a1 + a2
         使用 {{ sb(1,2)}}  
-    d.@app.before_first_request()
+    d. @app.before_first_request()
       
 
 11、中间件
@@ -64,5 +64,15 @@ PS:配置文件和全局变量大写
 12、上下文管理
     - ThreadLocal
     - 源码(request)
+    http://www.cnblogs.com/wupeiqi/articles/8202353.html
+    本地线程，保证即使是多个线程，自己的值也是互相隔离
+        - 情况一：单进程单线程 基于全局变量做
+        - 情况二：单进程多线程 threading.loacl对象
+        - 情况三：单进程单线程(多个协程)， threading.local 对象做不到
+     - 决定：
+        - 以后不支持携程，threading.local对象
+        - 支持： 自定义类似threading.local对象(支持携程)
+        
+        
     
     
